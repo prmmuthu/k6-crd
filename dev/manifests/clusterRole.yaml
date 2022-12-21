@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: k6-test
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - nodes
+      - configmaps
+      - services
+      - endpoints
+      - pods
+      - persistentvolumeclaims
+      - persistentvolumes
+      - namespaces
+    verbs:
+      - create
+      - get
+      - list
+      - watch
+      - delete
+      - update
+      - patch
